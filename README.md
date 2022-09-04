@@ -9,4 +9,6 @@
 4. Скачав этот файл, скачав либы из requirements и получив путь до папки recsys, можно запустить файл для тренировки модели с помощью команды     PYTHONPATH=(путь до recsys папки) python3 run_model.py, пример команды (PYTHONPATH=/home/vladislav/python/recsys/ python3 run_model.py), чтобы запустить файл с экспериментами введите в терминале команду PYTHONPATH=(путь до recsys папки) jupyter-lab
 
 
-О коде и эксперименте смотрите recsys.docx файл
+О коде смотрите recsys.docx файл
+
+Чтобы посммотреть различные эксперименты запускайте project/scripts/experiments.ipynb
