@@ -1,0 +1,9 @@
+numpy~=1.23.2
+pandas~=1.4.3
+scipy~=1.9.0
+torch~=1.12.1
+tensorboard
+tqdm~=4.64.0
+seaborn
+matplotlib
+sklearn
