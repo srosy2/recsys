@@ -135,7 +135,6 @@ class RL_Trainer(object):
                 if step % 1000 == 0 and step > 0:
                     hit, ndcg = run_evaluation(self.agent.actor, self.agent.state_repr, train_env.memory, self.params,
                                                full_dataset)
-                    print(hit, ndcg)
                     hits_all.append(hit)
                     ndcgs_all.append(ndcg)
                     if np.mean(np.array([hit, ndcg]) - np.array([best_hit_all, best_ndcg_all])) > 0:
@@ -143,7 +142,7 @@ class RL_Trainer(object):
                         self.agent.save(self.params['logs_dir'], [self.params['name_actor'], self.params['name_critic'],
                                                                   self.params['name_state']], best=True)
                 step += 1
-
+        print(f'best precision {best_hit_all}, best ndcg {best_ndcg_all}')
         with open(os.path.join(self.params['logs_dir'], 'memory.pickle'), 'wb') as f:
             pickle.dump(train_env.memory, f)
 
